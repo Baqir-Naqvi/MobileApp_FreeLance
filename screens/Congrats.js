@@ -78,9 +78,10 @@ const styles = StyleSheet.create({
 
   },
   subContainer: {
-    flex: 1,
+    flex:1,
     backgroundColor: 'white',
     margin: 20,
+     justifyContent: 'space-between'
   },
   TopSection: {
     justifyContent: 'center',
@@ -105,6 +106,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   Image: {
+
     height: 262,
     width: 255,
     borderRadius: 4,

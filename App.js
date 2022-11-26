@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './screens/Homescreen';
 import Welcome from './screens/Welcome'
 import Login from './screens/Login'
 import Documents from './screens/Documents';
@@ -27,11 +26,6 @@ function App() {
 
        
      
-          <Stack.Screen name="Congrats" component={Congrats}
-            options={{
-              headerShown: false,
-            }}
-          />
 
            <Stack.Screen name="MPin" component={MPin}
             options={{
@@ -68,7 +62,7 @@ function App() {
 
             }}
              />
-
+                   
           <Stack.Screen name="Avatar" component={Avatar}
             options={{
               headerShown: true,
@@ -78,9 +72,15 @@ function App() {
 
             }}
           />
-      
-          
-          <Stack.Screen name="Home" component={HomeScreen} />
+
+
+                      
+          <Stack.Screen name="Congrats" component={Congrats}
+            options={{
+              headerShown: false,
+            }}
+          />
+
           </Stack.Navigator>
       </ContextProvider>
     </NavigationContainer>

@@ -12,7 +12,7 @@ export default function Avatar() {
         <View style={styles.UpperContainer}>
 
             <View style={styles.leftMainImageContainer}>
-          <Image style={styles.mainimage} source={require('../assets/Rectangle-1.png')} />
+              <Image style={styles.mainimage} source={require('../assets/Rectangle-1.png')} />
             </View>
 
             <View style={styles.sideImageContainer}>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     
   },
   UpperContainer: {
-    flex: 2,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
@@ -82,30 +82,29 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'column',
     marginHorizontal: 10,
+    height:"95%",
 
   },
   mainimage: {
     width: 220,
-    height: 180,
+    height: "100%",
     borderRadius: 4,
     marginLeft: 5
   },
   mainimage2:{
     width: 220,
-    height: 180,
+    height:"100%",
     borderRadius: 4,
     marginRight: 7,
   },
   sideImageContainer: {
+     backgroundColor: '#fff',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-evenly',
     flexDirection: 'column',
-    width: '100%',
-    height: '100%',
     marginRight: 20,
-
-
+    height:"100%"
   },
   sideImageContainer2: {
     flex: 1,
@@ -114,21 +113,19 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: '100%',
     marginLeft: 10,
-    height: '100%',
+    height:"100%",
     justifyContent: 'space-evenly',
-
-
   },
 
   sideImage1: {
     width: 105,
-    height: 85,
+    height: "45%",
     borderRadius: 4,
 
   },
   sideImage2: {
     width: 105,
-    height: 85,
+    height: "45%",
     borderRadius: 4,
 
   },
