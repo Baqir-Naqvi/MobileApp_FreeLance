@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "App_1",
+    "slug": "App_1",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Group.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/Group.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.app_1",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Group.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/Group.png"
+    }
+  }
+}
