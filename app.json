@@ -1,34 +1,40 @@
 {
   "expo": {
-    "name": "App_1",
-    "slug": "App_1",
+    "name": "App1",
+    "slug": "App1",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./asset/Group.png",
+    "icon": "./assets/Group.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./asset/Group.png",
+      "image": "./assets/Group.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
+    "assetsBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "package": "com.app_1",
+      "slug": "App1",
+      "package": "com.app1",
       "adaptiveIcon": {
-        "foregroundImage": "./asset/Group.png",
+        "foregroundImage": "./assets/Group.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./asset/Group.png"
+      "favicon": "./assets/Group.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5d80fd48-6ffd-4d83-b5c8-6492d7369900"
+      }
     }
   }
 }

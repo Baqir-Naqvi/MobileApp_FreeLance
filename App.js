@@ -10,6 +10,7 @@ import MPin from './screens/MPin'
 import Avatar from './screens/Avatar'
 import Congrats from './screens/Congrats'
 
+
 function App() {
   const Stack = createNativeStackNavigator()
   return (

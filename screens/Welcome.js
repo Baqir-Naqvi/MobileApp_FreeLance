@@ -1,39 +1,30 @@
 import { View, Text,StyleSheet,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-import {useEffect} from 'react'
 import * as SplashScreen from 'expo-splash-screen';
-import * as Font from 'expo-font';
+import {useCallback} from 'react';
+import {useFonts} from 'expo-font';
 
 
 SplashScreen.preventAutoHideAsync();
 export default function Welcome() {
-    useEffect(() => {
-        async function loadResourcesAndDataAsync() {
-            try {
-                SplashScreen.preventAutoHideAsync();
-                await Font.loadAsync({
-                    'Satoshi': require('../asset/fonts/Satoshi-Variable.ttf'),
-                });
-            } catch (e) {
-                console.warn(e);
-            } finally {
-                SplashScreen.hideAsync();
-                console.log('SplashScreen.hideAsync()');
-            }
+    const navigation = useNavigation()
+    const [fontsLoaded] = useFonts({
+        'Satoshi': require('../assets/fonts/Satoshi-Variable.ttf'),
+        'Inter': require('../assets/fonts/Inter-VariableFont.ttf'),
+    });
+
+    const onLayoutRootView = useCallback(async () => {
+        if (fontsLoaded) {
+            await SplashScreen.hideAsync();
         }
-        loadResourcesAndDataAsync();
-    }, []);
+    }, [fontsLoaded]);
 
-
-            
-    const navigation=useNavigation()
-
-    if (!SplashScreen.preventAutoHideAsync()) {
+    if (!fontsLoaded) {
         return null;
     }
     return (
-        <View style={styles.container}>
+        <View style={styles.container} onLayout={onLayoutRootView}>
             <View style={styles.UpperSection}>
                 <View style={styles.uppperheading}>
                      <Text style={styles.text}>Welcome to Eloy</Text>
@@ -80,14 +71,14 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         color:"#8E8E93",
-        // fontFamily: 'Satoshi',
+        fontFamily: 'Satoshi',
     },
     welcomeText: {
         fontSize: 35,
         marginBottom: 20,
         alignSelf: 'center',
         fontWeight: 'bold',
-        // fontFamily: 'Satoshi',
+        fontFamily: 'Satoshi',
 
     },
     UpperSection: {
@@ -106,27 +97,32 @@ const styles = StyleSheet.create({
     },
     loginButton: {
         backgroundColor:"#DED6D6",
-        padding: 10,
         borderRadius: 5,
         height: 58,
         width: 325,
         borderRadius: 30,
-
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     loginText: {
         color: '#000000',
         textAlign: 'center',
-        fontSize: 26,
+        fontSize: 28,
+        fontFamily: 'Inter',
+        justifyContent: 'center',
+        alignItems: 'center',
        
     },
     signupButton: {
         backgroundColor: '#FF3D81',
-        padding: 10,
         borderRadius: 5,
         height: 58,
         width: 325,
         borderRadius: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
         marginVertical: 10
+        
     },
     aggreementText: {
         fontSize: 12,

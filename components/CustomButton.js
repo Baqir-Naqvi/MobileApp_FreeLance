@@ -9,7 +9,7 @@ export default function CustomButton({text, onPress}) {
     useEffect(() => {
         async function loadFont() {
             await Font.loadAsync({
-                'PeaceandLove': require('../asset/fonts/PeaceandLove.ttf'),
+                'PeaceandLove': require('../assets/fonts/PeaceandLove.ttf'),
             });
             setFontLoaded(true);
         }

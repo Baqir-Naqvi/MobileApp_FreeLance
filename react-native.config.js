@@ -3,5 +3,6 @@ module.exports = {
         ios: {},
         android: {},
     },
-    asset: ['./asset/fonts/'],
+    assets: ['./assets/fonts/',
+"./assets/fonts/Satoshi-Variable.ttf"],
 };

@@ -11,9 +11,9 @@ export default function FaceRecognition() {
 
         <View style={styles.UpperContainer}>
           {/* a circular image */}
-          <Image style={styles.circleImage} source={require('../asset/RectangleCopy5.png')} />
+          <Image style={styles.circleImage} source={require('../assets/RectangleCopy5.png')} />
 
-            <Image style={styles.image} source={require('../asset/Group.png')} />
+            <Image style={styles.image} source={require('../assets/Group.png')} />
 
           <CustomButton text="Scan your face" onPress={() => { 
           navigation.navigate('MPin')

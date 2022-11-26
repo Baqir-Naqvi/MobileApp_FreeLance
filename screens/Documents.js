@@ -12,7 +12,7 @@ export default function Documents() {
     useEffect(() => {
         async function loadFont() {
             await Font.loadAsync({
-                'PeaceandLove': require('../asset/fonts/PeaceandLove.ttf'),
+                'PeaceandLove': require('../assets/fonts/Peace-and-Love.ttf'),
             });
             setFontLoaded(true);
         }
@@ -33,9 +33,9 @@ export default function Documents() {
                 <Text style={styles.circleText}>ID</Text>
             </View>
             <View style={styles.MiddleSection}>
-            <Text style={styles.MiddleText}>OR</Text>
+            <Text style={styles.MiddleTxt}>OR</Text>
             {/* Image */}
-            <Image style={styles.image} source={require('../asset/upload-documents.png')}/>
+            <Image style={styles.image} source={require('../assets/upload-documents.png')}/>
             </View>
  
                   <CustomButton text="Upload Emirates ID" 
@@ -59,16 +59,16 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         },
     UpperContainer: {
-        flex: 2,
+        flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
         },
     circle: {
-        height: 200,
-        width: 200,
-        borderRadius: 100,
+        height: 250,
+        width: 250,
+        borderRadius: 125,
         backgroundColor: '#FF3D81',
         alignItems: 'center',
         justifyContent: 'center',
@@ -80,12 +80,12 @@ const styles = StyleSheet.create({
         fontWeight: 'medium',
         fontFamily:'PeaceandLove',
         },
-    MiddleText: {
+    MiddleTxt: {
+        fontFamily:'PeaceandLove',
         color: '#FF3D81',
         fontSize: 80,
         fontWeight: 'bold',
         marginTop: 20,
-        fontFamily:'PeaceandLove',
         alignSelf: 'center',
         marginRight: 10,
         },
@@ -95,14 +95,13 @@ const styles = StyleSheet.create({
             alignItems: 'center',
             justifyContent: 'center',
             flexDirection: 'row',
-            width: '100%'
+            width: '100%',
+            height: 220,
+         
             },
         image: {
             alignSelf: 'flex-end',
-            height: 200,
-            width:"50%",
-           
-
+            height: 220,           
         },
         
 })

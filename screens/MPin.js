@@ -29,8 +29,8 @@ export default function MPin() {
       
       {/* Image Section */}
       <View style={styles.ImageSection}>
-      <Image source={require('../asset/Group.png')} style={styles.backgroundImage1} />
-        <Image source={require('../asset/Component1.png')} style={styles.backgroundImage2} />
+      <Image source={require('../assets/Group.png')} style={styles.backgroundImage1} />
+        <Image source={require('../assets/Component1.png')} style={styles.backgroundImage2} />
       </View>
 
       {/* Text Section */}
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   },
   ImageSection: {
     flexDirection: 'row',
-    alignItems: 'right',
+    // alignItems: 'right',
     justifyContent: 'flex-end',
     width: '80%',  
   },

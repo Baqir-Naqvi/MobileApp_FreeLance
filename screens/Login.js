@@ -6,11 +6,19 @@ import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useEffect } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons'
+import * as Font from 'expo-font';
 
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigation=useNavigation();
+    const [isLoaded, setIsLoaded] = useState(false);
+    useEffect(() => {
+        Font.loadAsync({
+            'Satoshi': require('../assets/fonts/Satoshi-Variable.ttf'),
+        }).then(() => setIsLoaded(true));
+    }, []);
+
   return (
 
     <View style={styles.container}>
@@ -54,7 +62,7 @@ export default function Login() {
         {/* Lower section */}
         <View style={styles.lowerSection}>
             <Image
-                source={require('../asset/Group2.png')}
+                source={require('../assets/Group2.png')}
                 style={styles.lowerSectionImage}
             />
             {/* Sign up Text on Image */}
@@ -88,10 +96,11 @@ const styles = StyleSheet.create({
     },
     title: {
         flex: 1,
-        alignItems: 'left',
-        justifyContent: 'left',
+        // alignItems: 'left',
+        // justifyContent: 'left',
         width: '100%',
         paddingLeft: 30,
+        fontStyle: 'Satoshi',
         
     },
     titleText: {
@@ -149,8 +158,8 @@ const styles = StyleSheet.create({
     loginButton: {
         flex: 1,
         width: '100%',
-        alignItems: 'left',
-        justifyContent: 'left',
+        // alignItems: 'left',
+        // justifyContent: 'left',
         paddingLeft: 30,
     },
     loginButtonTouch: {
