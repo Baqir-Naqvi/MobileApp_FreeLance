@@ -1,23 +1,35 @@
 import { View, Text,StyleSheet,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-import {useState,useEffect} from 'react'
+import {useEffect} from 'react'
+import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 
 
+SplashScreen.preventAutoHideAsync();
 export default function Welcome() {
-    const navigation=useNavigation()
-    const [fontLoaded, setFontLoaded] = useState(false);
     useEffect(() => {
-        async function loadFont() {
-            await Font.loadAsync({
-                'Satoshi': require('../assets/fonts/Satoshi-Variable.ttf'),
-            });
-            setFontLoaded(true);
+        async function loadResourcesAndDataAsync() {
+            try {
+                SplashScreen.preventAutoHideAsync();
+                await Font.loadAsync({
+                    'Satoshi': require('../asset/fonts/Satoshi-Variable.ttf'),
+                });
+            } catch (e) {
+                console.warn(e);
+            } finally {
+                SplashScreen.hideAsync();
+                console.log('SplashScreen.hideAsync()');
+            }
         }
-        loadFont();
+        loadResourcesAndDataAsync();
     }, []);
-    if (!fontLoaded) {
+
+
+            
+    const navigation=useNavigation()
+
+    if (!SplashScreen.preventAutoHideAsync()) {
         return null;
     }
     return (
@@ -68,14 +80,14 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         color:"#8E8E93",
-        fontFamily: 'Satoshi',
+        // fontFamily: 'Satoshi',
     },
     welcomeText: {
         fontSize: 35,
         marginBottom: 20,
         alignSelf: 'center',
         fontWeight: 'bold',
-        fontFamily: 'Satoshi',
+        // fontFamily: 'Satoshi',
 
     },
     UpperSection: {
@@ -121,7 +133,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#8E8E93',
         textAlign: 'center',
-        fontFamily: 'Satoshi',
+        // fontFamily: 'Satoshi',
     },
     uppperheading:{
         height: 28

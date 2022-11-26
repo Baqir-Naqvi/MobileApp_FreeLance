@@ -12,7 +12,7 @@ export default function Documents() {
     useEffect(() => {
         async function loadFont() {
             await Font.loadAsync({
-                'PeaceandLove': require('../assets/fonts/PeaceandLove.ttf'),
+                'PeaceandLove': require('../asset/fonts/PeaceandLove.ttf'),
             });
             setFontLoaded(true);
         }
@@ -35,7 +35,7 @@ export default function Documents() {
             <View style={styles.MiddleSection}>
             <Text style={styles.MiddleText}>OR</Text>
             {/* Image */}
-            <Image style={styles.image} source={require('../assets/upload-documents.png')}/>
+            <Image style={styles.image} source={require('../asset/upload-documents.png')}/>
             </View>
  
                   <CustomButton text="Upload Emirates ID" 

@@ -12,33 +12,33 @@ export default function Avatar() {
         <View style={styles.UpperContainer}>
 
             <View style={styles.leftMainImageContainer}>
-              <Image style={styles.mainimage} source={require('../assets/Rectangle-1.png')} />
+              <Image style={styles.mainimage} source={require('../asset/Rectangle-1.png')} />
             </View>
 
             <View style={styles.sideImageContainer}>
-              <Image style={styles.sideImage1} source={require('../assets/RectangleCopy3.png')} />
-              <Image style={styles.sideImage2} source={require('../assets/RectangleCopy4.png')} />
+              <Image style={styles.sideImage1} source={require('../asset/RectangleCopy3.png')} />
+              <Image style={styles.sideImage2} source={require('../asset/RectangleCopy4.png')} />
             </View>
 
         </View>
         <View style={styles.UpperContainer}>
 
             <View style={styles.sideImageContainer2}>
-          <Image style={styles.sideImage1} source={require('../assets/RectangleCopy5.png')} />
-          <Image style={styles.sideImage2} source={require('../assets/RectangleCopy6.png')} />
+          <Image style={styles.sideImage1} source={require('../asset/RectangleCopy5.png')} />
+          <Image style={styles.sideImage2} source={require('../asset/RectangleCopy6.png')} />
             </View>
 
             <View style={styles.leftMainImageContainer}>
-                <Image style={styles.mainimage2} source={require('../assets/RectangleCopy.png')} />
+                <Image style={styles.mainimage2} source={require('../asset/RectangleCopy.png')} />
             </View>
 
         </View>
 
         {/* display 3 images in row */}
         <View style={styles.MiddleSection}>
-            <Image style={styles.image} source={require('../assets/Rectangle.png')} />
-        <Image style={styles.image} source={require('../assets/RectangleCopy4.png')} />
-        <Image style={styles.image} source={require('../assets/RectangleCopy9.png')} />
+            <Image style={styles.image} source={require('../asset/Rectangle.png')} />
+        <Image style={styles.image} source={require('../asset/RectangleCopy4.png')} />
+        <Image style={styles.image} source={require('../asset/RectangleCopy9.png')} />
           </View>
           <View style={styles.ButtonContainer}>
           <TouchableOpacity

@@ -7,7 +7,7 @@ export default function Congrats() {
   useEffect(() => {
     async function loadFont() {
       await Font.loadAsync({
-        'Satoshi': require('../assets/fonts/Satoshi-Variable.ttf'),
+        'Satoshi': require('../asset/fonts/Satoshi-Variable.ttf'),
       });
       setFontLoaded(true);
     }
@@ -18,7 +18,7 @@ export default function Congrats() {
   }
   return (
     <View style={styles.container}>
-       <Image source={require('../assets/Groupmasked.png')} style={styles.backgroundImage} />
+       <Image source={require('../asset/Groupmasked.png')} style={styles.backgroundImage} />
     
         <View style={styles.TopSection}>
           <Text style={styles.Title}>Congratulations!</Text>
@@ -27,7 +27,7 @@ export default function Congrats() {
         </View>
       <View style={styles.subContainer}>
         <View style={styles.BottomSection}>
-          <Image source={require('../assets/RectangleCopy9.png')} style={styles.Image} />
+          <Image source={require('../asset/RectangleCopy9.png')} style={styles.Image} />
           <View style={styles.Username}>
             <Text style={styles.UsernameText}>@HamzaJ17</Text>
           </View>
@@ -37,7 +37,7 @@ export default function Congrats() {
           <View style={styles.InfoBox}>
             {/* Left side contains create image name and title */}
             <View style={styles.LeftSide}>
-              <Image source={require('../assets/RectangleCopy9.png')} style={styles.ProfileImage} />
+              <Image source={require('../asset/RectangleCopy9.png')} style={styles.ProfileImage} />
               <View style={styles.ProfileInfo}>
                 <Text style={styles.ImageName}>Create</Text>
                 <Text style={styles.ImageTitle}>Hamza</Text>
@@ -46,7 +46,7 @@ export default function Congrats() {
 
             {/* Right side contains create QR Code and title */}
           <View style={styles.RightSide}>
-            <Image source={require('../assets/QRCode.png')} style={styles.ProfileImage} />
+            <Image source={require('../asset/QRCode.png')} style={styles.ProfileImage} />
             <View style={styles.ProfileInfo}>
               <Text style={styles.ImageName}>QR Code</Text>
               <Text style={styles.ImageTitle}>Scan to pay</Text>

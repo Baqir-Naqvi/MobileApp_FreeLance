@@ -5,6 +5,7 @@ import Inputfield from './../components/Inputfield';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useEffect } from 'react';
+import Icon from 'react-native-vector-icons/Ionicons'
 
 export default function Login() {
     const [email, setEmail] = useState('')
@@ -36,7 +37,8 @@ export default function Login() {
             />
         </View>
         {/* Remember me */}
-        <View style={styles.rememberMe}>
+        <View style={styles.rememberMe}>    
+        <Icon name='checkmark' size={25} color="black" />
             <Text style={styles.rememberMeText}>Remember me</Text>
             <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
         </View>
@@ -52,7 +54,7 @@ export default function Login() {
         {/* Lower section */}
         <View style={styles.lowerSection}>
             <Image
-                source={require('../assets/Group2.png')}
+                source={require('../asset/Group2.png')}
                 style={styles.lowerSectionImage}
             />
             {/* Sign up Text on Image */}
@@ -75,8 +77,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 20,
-
     },
     UpperSection: {
         flex: 1,
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: 20,
     },
     title: {
         flex: 1,
