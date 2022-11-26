@@ -18,15 +18,7 @@ function App() {
     <NavigationContainer>
       <ContextProvider>
           <Stack.Navigator>
-          <Stack.Screen name="MPin" component={MPin}
-            options={{
-              headerShown: true,
-              headerTitle: 'Your MPin',
-              headerBackTitleVisible: false,
-              headerTintColor: 'black',
-
-            }}
-          />
+         
           <Stack.Screen name="Welcome" component={Welcome}
             options={{
               headerShown: false
@@ -38,6 +30,16 @@ function App() {
           <Stack.Screen name="Congrats" component={Congrats}
             options={{
               headerShown: false,
+            }}
+          />
+
+           <Stack.Screen name="MPin" component={MPin}
+            options={{
+              headerShown: true,
+              headerTitle: 'Your MPin',
+              headerBackTitleVisible: false,
+              headerTintColor: 'black',
+
             }}
           />
           
